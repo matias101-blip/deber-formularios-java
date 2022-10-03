@@ -4,6 +4,8 @@
  */
 package formularios;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author thehunter101
@@ -26,21 +28,184 @@ public class RestoyCociente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbln1 = new javax.swing.JLabel();
+        lbln2 = new javax.swing.JLabel();
+        txtn1 = new javax.swing.JTextField();
+        txtn2 = new javax.swing.JTextField();
+        btnc = new javax.swing.JButton();
+        btnl = new javax.swing.JButton();
+        btns = new javax.swing.JButton();
+        txtres = new javax.swing.JTextField();
+        lblres = new javax.swing.JLabel();
+        lblcos = new javax.swing.JLabel();
+        txtcos = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lbln1.setText("Numero 1");
+
+        lbln2.setText("Numero 2");
+
+        btnc.setText("Calcular");
+        btnc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncActionPerformed(evt);
+            }
+        });
+
+        btnl.setText("Limpiar");
+        btnl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnlActionPerformed(evt);
+            }
+        });
+
+        btns.setText("Salir");
+        btns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsActionPerformed(evt);
+            }
+        });
+
+        txtres.setEditable(false);
+        txtres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtresActionPerformed(evt);
+            }
+        });
+
+        lblres.setText("Resto");
+
+        lblcos.setText("Cosiente");
+
+        txtcos.setEditable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbln1)
+                            .addComponent(lbln2)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnc)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblcos)
+                                .addComponent(lblres)))))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                                .addComponent(txtn1))
+                            .addGap(76, 76, 76))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnl)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                            .addComponent(btns)
+                            .addGap(37, 37, 37)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtcos, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtres, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(37, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbln1)
+                    .addComponent(txtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(lbln2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(txtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnc)
+                    .addComponent(btnl)
+                    .addComponent(btns))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblres)
+                    .addComponent(txtres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblcos)
+                    .addComponent(txtcos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtresActionPerformed
+
+    private void btncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncActionPerformed
+        // TODO add your handling code here:
+        
+        double n1, n2, cosiente, resto;      
+        
+        
+        do{
+            n1 = Double.parseDouble(txtn1.getText());
+            if(n1 > 0){
+                JOptionPane.showMessageDialog(null, "El numero Ingresado es el correcto 1");
+            }else{
+                JOptionPane.showMessageDialog(null, "Vuelva a ingresar u numero mayo que 0");
+                txtn1.setText("");
+                txtn1.grabFocus();
+            }
+        }while (n1 <= 0);
+        
+        
+        do{
+            n2 = Double.parseDouble(txtn2.getText());
+            if (n2 > 0){
+                JOptionPane.showMessageDialog(null, "El numero ingresado es el correcto 2");
+            }else{
+                JOptionPane.showMessageDialog(null, "Vuelva a Ingresar un numero mayor que 0");
+                txtn2.setText("");
+                txtn2.grabFocus();
+            }
+        }while (n2 <= 0);
+        
+        cosiente = n1 / n2;
+        
+        resto = n1 % n1;
+        
+        txtcos.setText("" + cosiente);
+        txtres.setText("" + resto);
+        
+        
+        
+    }//GEN-LAST:event_btncActionPerformed
+
+    private void btnlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlActionPerformed
+        // TODO add your handling code here:
+        txtn1.setText("");
+        txtn2.setText("");
+        txtcos.setText("");
+        txtres.setText("");
+    }//GEN-LAST:event_btnlActionPerformed
+
+    private void btnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btnsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +243,16 @@ public class RestoyCociente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnc;
+    private javax.swing.JButton btnl;
+    private javax.swing.JButton btns;
+    private javax.swing.JLabel lblcos;
+    private javax.swing.JLabel lbln1;
+    private javax.swing.JLabel lbln2;
+    private javax.swing.JLabel lblres;
+    private javax.swing.JTextField txtcos;
+    private javax.swing.JTextField txtn1;
+    private javax.swing.JTextField txtn2;
+    private javax.swing.JTextField txtres;
     // End of variables declaration//GEN-END:variables
 }
