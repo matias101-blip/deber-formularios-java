@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
  *
  * @author thehunter101
  */
-public class RestoyCociente extends javax.swing.JFrame {
+public class Raiz extends javax.swing.JFrame {
 
     /**
      * Creates new form RestoyCociente
      */
-    public RestoyCociente() {
+    public Raiz() {
         initComponents();
     }
 
@@ -32,13 +32,11 @@ public class RestoyCociente extends javax.swing.JFrame {
         lbln2 = new javax.swing.JLabel();
         txtn1 = new javax.swing.JTextField();
         txtn2 = new javax.swing.JTextField();
-        btnc = new javax.swing.JButton();
+        btnp = new javax.swing.JButton();
         btnl = new javax.swing.JButton();
         btns = new javax.swing.JButton();
-        txtres = new javax.swing.JTextField();
-        lblres = new javax.swing.JLabel();
-        lblcos = new javax.swing.JLabel();
-        txtcos = new javax.swing.JTextField();
+        txtr = new javax.swing.JTextField();
+        lblr = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,10 +44,10 @@ public class RestoyCociente extends javax.swing.JFrame {
 
         lbln2.setText("Numero 2");
 
-        btnc.setText("Calcular");
-        btnc.addActionListener(new java.awt.event.ActionListener() {
+        btnp.setText("Raiz");
+        btnp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncActionPerformed(evt);
+                btnpActionPerformed(evt);
             }
         });
 
@@ -67,18 +65,14 @@ public class RestoyCociente extends javax.swing.JFrame {
             }
         });
 
-        txtres.setEditable(false);
-        txtres.addActionListener(new java.awt.event.ActionListener() {
+        txtr.setEditable(false);
+        txtr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtresActionPerformed(evt);
+                txtrActionPerformed(evt);
             }
         });
 
-        lblres.setText("Resto");
-
-        lblcos.setText("Cosiente");
-
-        txtcos.setEditable(false);
+        lblr.setText("Radificar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,29 +87,27 @@ public class RestoyCociente extends javax.swing.JFrame {
                             .addComponent(lbln2)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnc)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblcos)
-                                .addComponent(lblres)))))
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                                .addComponent(txtn1))
-                            .addGap(76, 76, 76))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnl)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                            .addComponent(btns)
-                            .addGap(37, 37, 37)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtcos, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtres, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(37, Short.MAX_VALUE))))
+                        .addComponent(btnp)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                            .addComponent(txtn1))
+                        .addGap(76, 76, 76))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                        .addComponent(btns)
+                        .addGap(37, 37, 37))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtr, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(104, 104, 104))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(178, 178, 178)
+                .addComponent(lblr)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,31 +125,27 @@ public class RestoyCociente extends javax.swing.JFrame {
                         .addComponent(txtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnc)
+                    .addComponent(btnp)
                     .addComponent(btnl)
                     .addComponent(btns))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblres)
-                    .addComponent(txtres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblcos)
-                    .addComponent(txtcos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addComponent(lblr)
+                .addGap(18, 18, 18)
+                .addComponent(txtr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtresActionPerformed
+    private void txtrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtresActionPerformed
+    }//GEN-LAST:event_txtrActionPerformed
 
-    private void btncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncActionPerformed
+    private void btnpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpActionPerformed
         // TODO add your handling code here:
         
-        double n1, n2, cosiente, resto;      
+        double n1, n2, result, radi;      
         
         
         do{
@@ -183,23 +171,32 @@ public class RestoyCociente extends javax.swing.JFrame {
             }
         }while (n2 <= 0);
         
-        cosiente = n1 / n2;
+        radi = n1 / n2;
+        result = radi;
         
-        resto = n1 % n1;
+        while ((result - radi )!= 0){
+            result = radi;
+            radi = (result + (n1 / result)) / n2;
+        }
         
-        txtcos.setText("" + cosiente);
-        txtres.setText("" + resto);
+        if (n2 == 2 ){
+            int resp = (int) Math.round(radi);
+            txtr.setText("" + resp);
+        }else{
+            txtr.setText("2" + radi);
+        }
+       
+
         
         
         
-    }//GEN-LAST:event_btncActionPerformed
+    }//GEN-LAST:event_btnpActionPerformed
 
     private void btnlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlActionPerformed
         // TODO add your handling code here:
         txtn1.setText("");
         txtn2.setText("");
-        txtcos.setText("");
-        txtres.setText("");
+        txtr.setText("");
     }//GEN-LAST:event_btnlActionPerformed
 
     private void btnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsActionPerformed
@@ -224,14 +221,26 @@ public class RestoyCociente extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RestoyCociente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Raiz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RestoyCociente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Raiz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RestoyCociente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Raiz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RestoyCociente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Raiz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -240,22 +249,20 @@ public class RestoyCociente extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RestoyCociente().setVisible(true);
+                new Raiz().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnc;
     private javax.swing.JButton btnl;
+    private javax.swing.JButton btnp;
     private javax.swing.JButton btns;
-    private javax.swing.JLabel lblcos;
     private javax.swing.JLabel lbln1;
     private javax.swing.JLabel lbln2;
-    private javax.swing.JLabel lblres;
-    private javax.swing.JTextField txtcos;
+    private javax.swing.JLabel lblr;
     private javax.swing.JTextField txtn1;
     private javax.swing.JTextField txtn2;
-    private javax.swing.JTextField txtres;
+    private javax.swing.JTextField txtr;
     // End of variables declaration//GEN-END:variables
 }
